@@ -1,0 +1,73 @@
+
+	.dropbtn4 a ,.dropbtn3 a { text-decoration:none;color:white;}
+ .dropbtn,.dropbtn1,.dropbtn2,.dropbtn3,.dropbtn4,.dropbtn5{
+    background-color: #4CAF50;
+    color: white;
+   height:50px;
+    font-size: 16px;
+    border:1px solid black;
+    cursor: pointer;
+ box-shadow: 2px 8px 16px 0px rgba(0,0,0,0.2);
+	width:100px;
+	margin-top:25px;
+	
+	
+}
+.dropbtn2,.dropbtn4 {width:180px;}
+
+
+.dropdown , .dropdown1, .dropdown2, .dropdown3,.dropdown4,.dropdown5{ float:right;
+    position: relative;
+    display: inline-block;
+opacity:0.9;
+}
+
+.dropdown-content ,.dropdown-content1,.dropdown-content2,.dropdown-content5{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 8px 8px 16px 0px brown;
+    z-index: 1;
+	
+}
+.dropdown-content{width:190px;}
+.dropdown-content2{width:500px;margin-left:-60%;}
+.dropdown-content1{width:200px;}
+.dropdown-content5{width:150px;}
+
+.dropdown-content a ,.dropdown-content1 a,.dropdown-content3 a,.dropdown-content5 a{
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content2 a{color: black;
+    padding:12px 30px;
+    text-decoration: none;
+    display: inline-block;
+	
+	
+	}
+	.stnd,.lux,.du{
+		display:none;
+		  position: absolute;
+	}
+	.stndroom,.deroom,.luxroom{ float:left;display:inline-block;position:relative;}
+	
+.stndroom:hover,.deroom:hover,.luxroom:hover{background-color: #f1f1f1}
+
+
+.dropdown-content a:hover ,.dropdown-content1 a:hover ,.dropdown-content3 a:hover ,.dropdown-content5 a:hover{background-color: #f1f1f1}
+
+
+.dropdown:hover .dropdown-content,.dropdown1:hover .dropdown-content1,.dropdown2:hover .dropdown-content2,.dropdown5:hover .dropdown-content5{
+    display: block;
+}
+
+.stndroom:hover .stnd,.deroom:hover .du,.luxroom:hover .lux{display:block;}
+
+.dropdown:hover .dropbtn,.dropdown1:hover .dropbtn1 ,.dropdown2:hover .dropbtn2 ,.dropdown3:hover .dropbtn3 ,.dropdown4:hover .dropbtn4 ,.dropdown5:hover .dropbtn5{
+    background-color:purple;
+}
+.avalabilty{border-radius:25px;box-shadow:4px 4px 4px;margin-top:20px;margin-left:30px;height:40px;border:none;background-color:rgb(185, 50, 59)}
+.avalabilty:hover{background-color:rgb(136, 85, 117);}

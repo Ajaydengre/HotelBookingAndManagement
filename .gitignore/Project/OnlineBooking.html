@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    <head>
+           <title>Online Booking</title>
+		   <meta name="viewport" content="width=device-width, initial-scale=1">
+           <link rel="icon" type="image/jpg" href="images/LOGO2.jpg">
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+		  #header{width:100%; height:65px;background-color:#FF0B96;box-shadow:2px 8px 10px 0px rgba(0,0,0,0.3);}
+		  #name{width:150px;color:white;float:left;margin:20px;font-size:30px;}
+	      #menu{float:right;margin-right:30px;position:relative;}	
+	      #home,#login{background-color:#FF0B96;border:none;height:65px;cursor: pointer;width:70px;}
+          #avail{background-color:#FF0B96;border:none;font-size:20px;margin-left:5px;margin-top:63px;border-radius:5px;cursor: pointer;color:white;height:30px;} 		  
+	      #home:hover,#login:hover{background-color:purple;}
+		  
+		     a{text-decoration:none;color:white;}
+			
+			.fa:hover { opacity: 0.7;}
+		  #row1{width:100%;height:300px;background-image:url(images/background3.jpg);margin-top:10px}	
+		  #center1{background:rgba(0,0,0,0.9);width:50%;height:20%;position:absolute;margin-top:150px;margin-left:25%;}
+		  #footer{height:70px;width:100%;background-color:#171313;clear:both;margin-top:20px;}
+		  #booking{width:60%;height:80px;margin-left:20%;border-radius:5px;background:rgba(192,192,192,0.8);color:rgb(128,0,0);margin-top:15px;}
+          #room1,#room2,#room3{float:left;height:300px;width:60%;margin-left:20%;border-radius:5px;background:rgba(192,192,192,0.8);color:rgb(128,0,0);margin-top:10px;}
+          #room1image,#room2image,#room3image{float:left;margin:10px;width:40%;box-shadow:2px 4px 8px 0px rgba(27,24,25,0.2)}
+          #room1price,#room2price,#room3price{float:left;margin:10px;background:white;width:55%;height:280px;border-radius:4px;box-shadow:2px 4px 16px 0px rgba(0,0,0,0.4)}
+          #room1priceclm,#room2priceclm,#room3priceclm{float:left;margin-left:5px;height:180px;}
+          #room1pricemon,#room2pricemon,#room3pricemon{float:right;margin-right:5px;margin-top:40px;height:180px;}
+          h3{color:#FF0B96;font-family:Comic Sans MS;}
+          p{color:#C87CD1;}
+		 .modal,.modal1,.modal2 { display: none; position: fixed; z-index: 1; padding-top: 100px;left: 0; top: 0; width: 100%; height: 100%;overflow: auto; background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.4);}
+          #head,#head1,#head2{width:50%;margin:auto;background-color:#FF0B96;height:35px;}
+         .close,.close1,.close2{border-left:1px solid white;float:right;padding:8px;height:35px;font-size:24px;color:white;}
+         .close:hover,.close:focus {color: #000;text-decoration: none; cursor: pointer;}
+		 .close1:hover,.close1:focus {color: #000;text-decoration: none; cursor: pointer;}
+		  .close2:hover,.close2:focus {color: #000;text-decoration: none; cursor: pointer;}
+		  .cls:hover,.cls:focus{color: #000;text-decoration: none; cursor: pointer;}
+          #content,#content1,#content2{width:50%;margin:auto;background-color:white;}
+          th,td{width:30%;border:1px solid silver;border-collapse:collapse;}
+          table{width:100%;border-collapse:collapse;}
+          td{text-align:center}
+		  .logincontents{width:200px;background-color:#543255;padding:10px;margin-left:-80px;position:absolute;display:none;}
+		  #fname,#pass{width:80%;height:30px;border:1px solid silver;border-radius:3px;margin-left:10px;background-color:#543255;padding-left:10px;margin-top:5px;}
+		
+		  
+		  
+		  
+		  
+		  
+	    </style>
+    </head>
+    <body style="background-color:#543255">
+	<div id="back">
+         <div id="header">
+            <div id="name">TRIP INN</div>
+            <div id="menu"> 
+			<button id="home" ><a href="HomeTripInn.html"><i class="fa fa-home" style=" font-size:36px; padding:0px;" ></i></br>Home</a></button>
+			<button id="login" style="color:white;"><i class="fa fa-lock" style=" font-size:36px; padding:0px;"></i></br>Login</button>
+			<div id="logincontent" class="logincontents"><form autocomplete="off">
+			<span style="float:right;color:silver;height:30px;" class="cls" id="closelogit"><b>&times;</b></span></br>
+			<input type="text" id="fname" placeholder="Enter User Name">
+			<input type="password" id="pass" placeholder="Enter Password"></br>
+			<p style="margin-left:10px;margin-top:5px;"><a href="" style="color:red;">Forget Password ?</a></p>
+			<button style="cursor:pointer;color:white;background:#FF0B96;font-size:25px;margin-left:10px;height:40px;border-radius:4px;border:none;width:80%;">Login
+			</button></form>
+			<script>
+			          var con = document.getElementById('logincontent');
+			          var logbtn = document.getElementById('login');
+                      logbtn.onclick = function(){
+					  con.style.display ="block";
+					  }
+	                  var closelogin = document.getElementById('closelogit');
+					  closelogin.onclick = function() { con.style.display ="none"; }
+                                         
+                                      
+					 
+			</script>
+			</div>
+			
+			</div>
+         </div>
+		 
+		<div id="row1">
+		    
+		    <div id="center1"> 
+			     <div style="margin:5px;float:left;margin-left:40px;">
+			   
+		             <label>
+                         <p style="color: rgb(255, 255, 255);font-size:20px">Check In</p>
+                            <div style="position:relative;">
+                                 <i class="fa fa-calendar" style="font-size:25px;color:black;position: absolute;font-style: normal;display: block;width:25px;"></i>
+                                 <input type="date" placeholder="dd-mm-yy" style="border-radius:4px;height:25px;padding-left: 25px;" >
+						        
+                                               
+                            </div>
+                     </label>
+			
+				</div>
+				<div style="margin:5px;float:left;">
+				      <label>
+                         <p style="color: rgb(255, 255, 255);font-size:20px">Check Out</p>
+                         <div style="position:relative;">
+                             <i class="fa fa-calendar"  style="font-size:25px;color:black;position: absolute;font-style: normal;display: block;width:25px;"></i>
+                             <input type="date" placeholder="dd-mm-yy" style="border-radius:4px;height:25px;padding-left: 25px;">
+                                               
+                         </div>
+                      </label>
+				</div>
+		        <div style="margin:5px;float:left;"><button id="avail" onclick="">Check Availability</button>
+		        </div>
+		    </div>		 
+		</div>
+		<div>
+            <div id="booking"><h1 style="margin-left:12%;margin-top:25px;position:absolute;">Show Price:Per Room Per Night</div>
+		<!--Hidden content start-->
+		    <div id="myModal" class="modal">
+                <div id="head">
+                    <div style="float:left;margin:5px;padding:5px;color:white">Rate Information</div>
+                    <span class="close"><b>&times;</b></span>
+                    <span style="float:right;margin:5px;padding:5px;color:white">All Prices are in INR(Rs)(All Taxes Inclusive) </span>
+                </div>   
+                <div id="content">
+                    <div style="float:left;font-size:20px;width:100%;height:33px;">Standard Room Only</div>
+                      <table >
+                         <tr>
+                            <th>Per Night</th>
+                        	<th>Extra Adult Rate</th>
+                        	<th>Extra Child Rate</th>
+                         </tr>
+                         <tr>
+                            <td>1,320.00</td>
+                        	<td>500.00</td>
+                        	<td>500.00</td>
+                         </tr>
+                        </table>
+                </div>
+            </div>
+			<!--Hidden content End-->
+            <div id="room1">
+                <div id="room1image"><img src="images/standardroom2.jpg" style="width:100%;">
+				</div>
+                 <div id="room1price">
+                    <div id="room1priceclm"><h3>Standard Room Only</h3>
+	                    <p>Room Capacity:3<i class="fa fa-male"style="font-size:24px;"></i> 2<i class="fa fa-child"style="font-size:18px;"></i></p>
+	                    <h2>Room Rates Inclusive</br> of Tax</h2>
+	                    <h3>Room Only</h3>
+                    </div>
+                    <div id="room1pricemon">
+	                       <h3>Rs.1,320.00<button  id="myBtn" style="background:white;border:none;cursor:pointer;">
+						   <i class="fa fa-info-circle" style="font-size:24px;color:#FF0B96;"></i></button></h3>
+	                        <p>Per Room Per Night</br>2Adults,2Child,1Room</p>
+							<script>
+                                      // Get the modal
+                                      var modal = document.getElementById('myModal');
+
+                                      // Get the button that opens the modal
+                                      var btn = document.getElementById("myBtn");
+
+                                      // Get the <span> element that closes the modal
+                                      var span = document.getElementsByClassName("close")[0];
+
+                                      // When the user clicks the button, open the modal 
+                                      btn.onclick = function() {
+                                          modal.style.display = "block";
+                                      }
+
+                                      // When the user clicks on <span> (x), close the modal
+                                      span.onclick = function() {
+                                          modal.style.display = "none";
+                                      }
+
+                                      // When the user clicks anywhere outside of the modal, close it
+                                      window.onclick = function(event) {
+                                          if (event.target == modal) {
+                                              modal.style.display = "none";
+                                          }
+                                      }
+                             </script>
+	                </div>
+	                <div style="clear:both;width:100%;border-bottom:1px solid silver;box-shadow:0px 2px 6px 0px rgba(0,0,0,0.3);">
+					</div>
+                    <div style="float:left;margin-left:5px;margin-top:8px;"><h4 style="cursor:pointer;color:#191970"> Room Amenities</h4>
+					</div>
+	                <div style="float:right;margin-right:15px;margin-top:15px;">
+					     <button style="cursor:pointer;color:white;background:#FF0B96;height:36px;border-radius:4px;border:none;"><a href="Payment.html">Book Room</a></button>
+					</div>
+                </div>
+             </div>
+			<!--Hidden content start-->
+		    <div id="myModal1" class="modal1">
+                <div id="head1">
+                    <div style="float:left;margin:5px;padding:5px;color:white">Rate Information</div>
+                    <span class="close1"><b>&times;</b></span>
+                    <span style="float:right;margin:5px;padding:5px;color:white">All Prices are in INR(Rs)(All Taxes Inclusive) </span>
+                </div>   
+                <div id="content1">
+                    <div style="float:left;font-size:20px;width:100%;height:33px;">Delux Room Only</div>
+                      <table >
+                         <tr>
+                            <th>Per Night</th>
+                        	<th>Extra Adult Rate</th>
+                        	<th>Extra Child Rate</th>
+                         </tr>
+                         <tr>
+                            <td>1,650.00</td>
+                        	<td>650.00</td>
+                        	<td>650.00</td>
+                         </tr>
+                        </table>
+                </div>
+            </div>
+			<!--Hidden content End-->
+            <div id="room2">
+                   <div id="room2image"><img src="images/deluxroom2.jpg" style="width:100%;">
+				   </div>
+                   <div id="room2price">
+                        <div id="room2priceclm"><h3>Deluxe Room Only</h3>
+	                         <p>Room Capacity:3<i class="fa fa-male"style="font-size:24px;"></i> 2<i class="fa fa-child"style="font-size:18px;"></i></p>
+	                         <h2>Room Rates Inclusive</br> of Tax</h2>
+	                         <h3>Room Only</h3>
+                        </div>
+                        <div id="room2pricemon">
+	                          <h3>Rs.1,650.00
+							  <button id="myBtn1" style="background:white;border:none;cursor:pointer;">
+							  <i class="fa fa-info-circle" style="font-size:24px;color:#FF0B96"></i></button></h3>
+	                          <p>Per Room Per Night</br>2Adults,2Child,1Room</p>
+							  <script>
+                                       // Get the modal
+                                       var modal1 = document.getElementById('myModal1');
+
+                                       // Get the button that opens the modal
+                                       var btn1 = document.getElementById("myBtn1");
+
+                                       // Get the <span> element that closes the modal
+                                       var span1 = document.getElementsByClassName("close1")[0];
+
+                                       // When the user clicks the button, open the modal 
+                                       btn1.onclick = function() {
+                                           modal1.style.display = "block";
+                                       }
+
+                                       // When the user clicks on <span> (x), close the modal
+                                       span1.onclick = function() {
+                                           modal1.style.display = "none";
+                                       }
+
+                                       // When the user clicks anywhere outside of the modal, close it
+                                       window.onclick = function(event) {
+                                           if (event.target == modal1) {
+                                               modal1.style.display = "none";
+                                           }
+                                       }
+                              </script>
+	                    </div>
+	                    <div style="clear:both;width:100%;border-bottom:1px solid silver;box-shadow:0px 2px 6px 0px rgba(0,0,0,0.3);">
+						</div>
+                        <div style="float:left;margin-left:5px;margin-top:8px;"><h4 style="cursor:pointer;color:#191970">Room Amenities</h4>
+						</div>
+	                    <div style="float:right;margin-right:15px;margin-top:15px;">
+						    <button style="cursor:pointer;color:white;background:#FF0B96;height:36px;border-radius:4px;border:none;"><a href="Payment.html">Book Room</a></button>
+						</div>
+                    </div>		
+            </div>
+			<!--Hidden content start-->
+		    <div id="myModal2" class="modal2">
+                <div id="head2">
+                    <div style="float:left;margin:5px;padding:5px;color:white">Rate Information</div>
+                    <span class="close2"><b>&times;</b></span>
+                    <span style="float:right;margin:5px;padding:5px;color:white">All Prices are in INR(Rs)(All Taxes Inclusive) </span>
+                </div>   
+                <div id="content2">
+                    <div style="float:left;font-size:20px;width:100%;height:33px;">Luxury Room Only</div>
+                      <table >
+                         <tr>
+                            <th>Per Night</th>
+                        	<th>Extra Adult Rate</th>
+                        	<th>Extra Child Rate</th>
+                         </tr>
+                         <tr>
+                            <td>2,750.00</td>
+                        	<td>1000.00</td>
+                        	<td>1000.00</td>
+                         </tr>
+                        </table>
+                </div>
+            </div>
+			<!--Hidden content End-->
+            <div id="room3">
+                    <div id="room3image"><img src="images/luxuryroom2.jpg" style="width:100%;">
+					</div>
+                    <div id="room3price">
+                         <div id="room3priceclm"><h3>Luxury Room Only</h3>
+	                         <p>Room Capacity:3<i class="fa fa-male"style="font-size:24px;"></i> 2<i class="fa fa-child"style="font-size:18px;"></i></p>
+	                         <h2>Room Rates Inclusive</br> of Tax</h2>
+	                         <h3>Room Only</h3>
+                         </div>
+                         <div id="room3pricemon">
+	                         <h3>Rs.2,750.00
+						     <button id="myBtn2" style="background:white;border:none;cursor:pointer;">
+							 <i class="fa fa-info-circle" style="font-size:24px;color:#FF0B96"></i></button></h3>
+	                         <p>Per Room Per Night</br>2Adults,2Child,1Room</p>
+							 <script>
+                                       // Get the modal
+                                       var modal2 = document.getElementById('myModal2');
+
+                                       // Get the button that opens the modal
+                                       var btn2 = document.getElementById("myBtn2");
+
+                                       // Get the <span> element that closes the modal
+                                       var span2 = document.getElementsByClassName("close2")[0];
+
+                                       // When the user clicks the button, open the modal 
+                                       btn2.onclick = function() {
+                                           modal2.style.display = "block";
+                                       }
+
+                                       // When the user clicks on <span> (x), close the modal2
+                                       span2.onclick = function() {
+                                           modal2.style.display = "none";
+                                       }
+
+                                       // When the user clicks anywhere outside of the modal2, close it
+                                       window.onclick = function(event) {
+                                           if (event.target == modal2) {
+                                               modal2.style.display = "none";
+                                           }
+                                       }
+                              </script>
+	                    </div>
+	                    <div style="clear:both;width:100%;border-bottom:1px solid silver;box-shadow:0px 2px 6px 0px rgba(0,0,0,0.3);">
+						</div>
+                        <div style="float:left;margin-left:5px;margin-top:8px;"><h4 style="cursor:pointer;color:#191970"> Room Amenities</h4>
+						</div>
+	                    <div style="float:right;margin-right:15px;margin-top:15px;">
+						      <button style="cursor:pointer;color:white;background:#FF0B96;height:36px;border-radius:4px;border:none;"><a href="Payment.html">Book Room</a></button>
+					    </div>
+                    </div>
+
+            </div>
+        </div>
+		 
+		 <div id="footer">
+		     <div style="float:left;margin-left:150px;font-size:30px;padding:10px;color:#E61C1C;">Follow Us/Share <i class="fa fa-angle-right" style="color:#E61C1C;font-size:30px"></i>
+		     </div>
+		     <div style="float:left;">
+		     <a href="http://www.facebook.com" class="fa fa-facebook"  style="padding: 10px; font-size: 36px; width:40px; text-align: center; text-decoration: none; margin: 5px 2px; color:white;background-color: #3b5998;"> </a>
+             <a href="http://www.google.com"  class="fa fa-google-plus" style="padding: 10px; font-size: 36px; width:40px; text-align: center; text-decoration: none; margin: 5px 2px; color:white;background-color: #d34836;"></a>
+             <a href="http://www.twitter.com" class="fa fa-twitter" style="padding: 10px; font-size: 36px; width:40px; text-align: center; text-decoration: none; margin: 5px 2px; color:white;background-color: #0084b4"></a>
+			 <a href="http://www.youtube.com" class="fa fa-youtube" style="padding: 10px; font-size: 36px; width:40px; text-align: center; text-decoration: none; margin: 5px 2px; color:white;background-color:#c4302b"></a>
+			 <a href="http://www.yahoo.com" class="fa fa-yahoo" style="padding: 10px; font-size: 36px; width:40px; text-align: center; text-decoration: none; margin: 5px 2px; color:white;background-color:#430297"></a>
+			 <a href="http://www.instagram.com" class="fa fa-instagram" style="padding: 10px; font-size: 36px; width:40px; text-align: center; text-decoration: none; margin: 5px 2px; color:white;background-color:#125688;"></a>
+			 <a href="http://www.pinterest.com" class="fa fa-pinterest" style="padding: 10px; font-size: 36px; width:40px; text-align: center; text-decoration: none; margin: 5px 2px; color:white;background-color:#cb2027;"></a>
+			 </div>
+			 <div style="font-family:Comic Sans MS;float:right;margin-top:30px;font-size:15px;padding:10px;color:#E61C1C;">Created By-Sagrika,Ajay,Prajjwal And Shaurbh.
+             </div>       
+		 </div>
+	</div>
+	
+    </body>
+</html>

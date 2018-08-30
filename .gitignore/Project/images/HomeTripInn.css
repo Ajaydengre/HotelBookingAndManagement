@@ -1,0 +1,13 @@
+  #header{width:100%; height:115px;margin-top:10px;border-bottom:1px solid black;background-image:url(falls4.jpg);box-shadow:2px 8px 10px 0px rgba(0,0,0,0.3);}
+ #logo{float:left;height:100px;margin-left:2%;}
+ #content_area{margin-top:25px;}
+ #banner{float:left;}
+ #picture{box-shadow:8px 8px 10px 0px rgba(0,0,0,0.4);}
+ #footer{clear:both;width:100%; margin-top:1%;height:250px;border-bottom:1px solid #c7c7c7; box-shadow:2px 8px 10px 0px rgba(204, 36, 223,0.3);background:rgb(194, 66, 213);}
+  #left_col{border-radius: 12px;float:left;margin-left:1%;font-family:Maiandra GD;width:18%;height:250px;border:1px solid #333;color:rgb(26, 236, 117);background:rgb(185, 50, 59);padding:20px;
+ display: inline-block;box-shadow:4px 4px 16px 0px rgba(226, 95, 113,0.8);}
+ #right_col{margin-left:1%;width:18%;margin-top:1%;color:brown; position: relative;display:inline-block;}
+ #clame{clear:both;margin-top:20px;padding:20px;background:#171313;height:320px; position: relative;display: inline-block;width:95%;
+ box-shadow:2px 8px 10px 0px rgba(0,0,0,0.3);border-bottom:1px solid black;}
+ #jhs,#jhss,#jhsss,#jhssss{float:left;margin-left:2%;width:20%;height:70%;position: relative;display: inline-block;}
+ p{font-family:Comic Sans MS;font-size:15px;color:#C87CD1;}

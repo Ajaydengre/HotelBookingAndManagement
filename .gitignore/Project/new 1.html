@@ -1,0 +1,240 @@
+<html><head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+		   
+           <title>Payment</title>
+		   
+           <link rel="icon" type="image/jpg" href="images/LOGO2.jpg">
+		   <link rel="stylesheet" href="css/homepage.css">
+		   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		   
+        <style>
+    
+	        .fa  {
+	               text-align:center; 
+		           text-decoration: none; 
+		           color:white;
+		           font-size:3vw;
+				   width:4vw;
+				   padding:1vh;
+                   margin-top:1vh; }
+		  
+           .fa:hover {
+    	           opacity: 0.7; }	
+	       
+	    </style>
+		
+		
+		
+    </head>
+<body>
+         <div id="header">
+              
+			  <div id="sidehotelname">TRIP INN</div>
+			  <div class="dropdown">
+			    <button title="Already Registered User Login" id="login" class="menubtn2"> <i class="fa fa-user-circle" style=" font-size:2vw;"></i><br>Login</button>
+				
+			      <div id="logincontent" class="logincontents" style="width:18vw;margin-left:-12vw;">
+				  <form autocomplete="off">
+			        <span class="closebutton" id="closelogit"><b>×</b></span><br>
+					
+			        <input type="text" class="enterinputs" placeholder="Enter User Name">
+			        <input type="password" class="enterinputs" placeholder="Enter Password"><br>
+			        <p><a href="" style="color:red;">Forget Password ?</a></p>
+			     <button class="loginandbooking">Login</button>
+				 </form>
+				 </div>
+			<script>
+			          var con = document.getElementById('logincontent');
+			          var logbtn = document.getElementById('login');
+                      logbtn.onclick = function(){
+					  con.style.display ="block";
+					  }
+	                  var closelogin = document.getElementById('closelogit');
+					  closelogin.onclick = function() { con.style.display ="none"; }
+                                         
+                                      
+					 
+			</script>
+			  
+			  
+         </div>
+		       <div class="dropdown">
+			   <button title="New User Register Here" class="menubtn2">
+			     <a href="">
+			         <i class="fa fa-user-plus" style=" font-size:2vw;"> </i>
+			         <br>Sign Up
+				 </a>
+			   </button>
+			  </div>
+			  
+              <div class="dropdown">
+			   <button title="Read Cancellation Policy Before Cancle Your Room Booking" style=" font-size:1vw;" class="menubtn2">
+			     <a href="">
+			         <i class="fa fa-close" style=" font-size:2vw;"> </i>
+			         <br>Cancle Booking
+				 </a>
+			   </button>
+			  </div>
+			   <div class="dropdown">
+			   <button title="Location On Google Map" class="menubtn2">
+			     <a href="">
+			         <i class="fa fa-map-o" style=" font-size:2vw;"></i>
+			         <br>Map
+				 </a>
+			   </button>
+			  </div>
+			  <div class="dropdown">
+			   <button title="Home Page" class="menubtn2">
+			     <a href="Home.html">
+			         <i class="fa fa-home" style=" font-size:2vw;"> </i>
+			         <br>Home
+				 </a>
+			   </button>
+			  </div>
+			  
+		 </div>
+		 
+		 <div id="row1">
+		    
+		    <div id="center1"> 
+			     <div style="float:left;">
+			        
+		             <label>
+                         <p style="color: rgb(255, 255, 255);font-size:1.5vw">Check In</p>
+                            <div style="clear:both;">
+                                <span> <i class="fa fa-calendar" style="color:black;font-size:1.8vw;padding:0;position: absolute;display: block;"></i>
+                                 <input type="date" placeholder="dd-mm-yy" class="enterinputs" style="background-color:white;padding-left: 2.5vw;">
+						        </span>
+                                               
+                            </div>
+                     </label>
+			
+				</div>
+				 <div style="float:left;">
+			        
+		             <label>
+                         <p style="color: rgb(255, 255, 255);font-size:1.5vw">Check Out</p>
+                            <div style="clear:both;">
+                                <span> <i class="fa fa-calendar" style="color:black;font-size:1.8vw;padding:0;position: absolute;display: block;"></i>
+                                 <input type="date" placeholder="dd-mm-yy" class="enterinputs" style="background-color:white;padding-left: 2.5vw;">
+						        </span>
+                                               
+                            </div>
+                     </label>
+			
+				</div>
+		        <div style="float:left"> <p style="color: rgb(255, 255, 255);font-size:1.5vw">↵ </p>
+				<div style="clear:both;">
+				<button style="" class="loginandbooking" id="checkavability" onclick="">Check Availability</button></div>
+		        </div>
+		    </div>	
+		</div>
+		
+		<div>
+		   <div class="divbackground"><h4 style="margin-left:12%;font-size:2vw;">Show Price : Per Room Per Night</h4></div>
+		     <!--Hidden content start-->
+		    <div id="myModal" class="modal" style="display: block;">
+                <div class="hiddenheader">
+                    <span style="margin:1vw;color:white">Rate Information</span>
+                    
+                    <span style="margin:5px;padding:5px;color:white">All Prices are in INR(Rs)(All Taxes Inclusive) </span>
+					<span class="closebutton" style="color:white;border-left:1px solid white;"><b>×</b></span>
+                </div>   
+                <div id="content">
+                    <div style="float:left;font-size:20px;width:100%;height:33px;">Standard Room Only</div>
+                      <table>
+                         <tbody><tr>
+                            <th>Per Night</th>
+                        	<th>Extra Adult Rate</th>
+                        	<th>Extra Child Rate</th>
+                         </tr>
+                         <tr>
+                            <td>1,320.00</td>
+                        	<td>500.00</td>
+                        	<td>500.00</td>
+                         </tr>
+                        </tbody></table>
+                </div>
+            </div>
+			<!--Hidden content End-->
+			            <div id="room1">
+                <div id="room1image"><img src="images/standardroom2.jpg" style="width:100%;">
+				</div>
+                 <div id="room1price">
+                    <div id="room1priceclm"><h3>Standard Room Only</h3>
+	                    <p>Room Capacity:3<i class="fa fa-male" style="font-size:24px;"></i> 2<i class="fa fa-child" style="font-size:18px;"></i></p>
+	                    <h2>Room Rates Inclusive<br> of Tax</h2>
+	                    <h3>Room Only</h3>
+                    </div>
+                    <div id="room1pricemon">
+	                       <h3>Rs.1,320.00<button id="myBtn" style="background:white;border:none;cursor:pointer;">
+						   <i class="fa fa-info-circle" style="font-size:24px;color:#FF0B96;"></i></button></h3>
+	                        <p>Per Room Per Night<br>2Adults,2Child,1Room</p>
+							<script>
+                                      // Get the modal
+                                      var modal = document.getElementById('myModal');
+
+                                      // Get the button that opens the modal
+                                      var btn = document.getElementById("myBtn");
+
+                                      // Get the <span> element that closes the modal
+                                      var span = document.getElementsByClassName("close")[0];
+
+                                      // When the user clicks the button, open the modal 
+                                      btn.onclick = function() {
+                                          modal.style.display = "block";
+                                      }
+
+                                      // When the user clicks on <span> (x), close the modal
+                                      span.onclick = function() {
+                                          modal.style.display = "none";
+                                      }
+
+                                      // When the user clicks anywhere outside of the modal, close it
+                                      window.onclick = function(event) {
+                                          if (event.target == modal) {
+                                              modal.style.display = "none";
+                                          }
+                                      }
+                             </script>
+	                </div>
+	                <div style="clear:both;width:100%;border-bottom:1px solid silver;box-shadow:0px 2px 6px 0px rgba(0,0,0,0.3);">
+					</div>
+                    <div style="float:left;margin-left:5px;margin-top:8px;"><h4 style="cursor:pointer;color:#191970"> Room Amenities</h4>
+					</div>
+	                <div style="float:right;margin-right:15px;margin-top:15px;">
+					     <button style="cursor:pointer;color:white;background:#FF0B96;height:36px;border-radius:4px;border:none;"><a href="Payment.html">Book Room</a></button>
+					</div>
+                </div>
+             </div>
+		   
+		   
+		</div>
+		 
+		  <div id="footer">
+		    <div style="float:left;margin-left:5vw;padding:0vw 1vh;font-size:3vw;color:#E61C1C;">
+			 <i title="Like Us" class="fa fa-thumbs-o-up" style="color:#E61C1C;padding:0vw"></i>/
+			 <i title="Follow Us" class="fa fa-rss-square" style="color:#E61C1C;padding:0vw"></i>/
+			 <i title="Share" class="fa fa-share-alt-square" style="color:#E61C1C;padding:0vw"></i>
+			 
+			 <i class="fa fa-angle-right" style="color:#E61C1C;padding:0vw"></i>
+		     </div>
+		     <div style="float:left;">
+		     <a title="FaceBook" href="http://www.facebook.com" class="fa fa-facebook" style="background-color: #3b5998;"> </a>
+             <a title="Google +" href="http://www.google.com" class="fa fa-google-plus" style="background-color: #d34836;"></a>
+             <a title="Twitter" href="http://www.twitter.com" class="fa fa-twitter" style="background-color: #0084b4"></a>
+			 <a title="Youtube" href="http://www.youtube.com" class="fa fa-youtube" style="background-color:#c4302b"></a>
+			 <a title="Yahoo" href="http://www.yahoo.com" class="fa fa-yahoo" style="background-color:#430297"></a>
+			 <a title="Instagram" href="http://www.instagram.com" class="fa fa-instagram" style="background-color:#125688;"></a>
+			 <a title="Pinterest" href="http://www.pinterest.com" class="fa fa-pinterest" style="background-color:#cb2027;"></a>
+			 </div>
+			 <div title="Ajay Dengre" style="font-family:Comic Sans MS;float:right;margin-top:3vh;font-size:1.2vw;padding1vw 1vh;color:#E61C1C;">Created By-Ajay Dengre
+             </div>
+                    
+     </div>
+	   
+    
+
+</body></html>
